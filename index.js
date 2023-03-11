@@ -4,7 +4,9 @@ const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
-const questions = [
+inquirer
+  .prompt([
+
         {
         type: "input",
         message: "What is your GitHub username?",
@@ -51,16 +53,16 @@ const questions = [
         name: "projectlicense",
         choices: ['None','MIT','Eclipse', 'IBM', 'ISC', 'SIL']
     },
-];
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
 
-// function to initialize program
-function init() {
-
-}
-
-// function call to initialize program
-init();
+]).then((data) => {
+    console.log(data);
+    fs.writeFile('README.md'.generateMarkdown(data),
+        error => {
+            if (error) {
+                console.log('We cant generate a README file until all the data has been inputted')
+            }
+            console.log('We have generated your README file')
+        }
+    )
+})
