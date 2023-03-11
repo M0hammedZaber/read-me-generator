@@ -1,5 +1,6 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
+
   return `# ${data.projecttitle}
 
   ## Description
@@ -29,16 +30,15 @@ function generateMarkdown(data) {
 
   ## Collaborators
 
-  ${data.projectcollaborator}
+  ${data.projectcollaborator} contributed to this project
 
     ## License
 
-  ${data.projectlicense}
+  This project is covered under the ${data.projectlicense} license
 
   ## Questions
 
-  ${data.username}
-  ${data.email}
+  If you have any questions please contact me at ${data.email} or visit my GitHub profile to see more of my work at https://github.com/${data.username}/
 
 `;
 }
