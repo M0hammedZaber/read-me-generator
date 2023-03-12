@@ -55,14 +55,11 @@ inquirer
     },
 
 
-]).then((data) => {
-    console.log(data);
-    fs.writeFile('README.md'.generateMarkdown(data),
-        error => {
-            if (error) {
-                console.log('We cant generate a README file until all the data has been inputted')
-            }
-            console.log('We have generated your README file')
-        }
+]).then((information) => {
+
+    const README = generateMarkdown(information)
+
+    fs.writeFile("README.md", README, (err) => 
+err? console.error(err) : console.log("We have generated your README file.")
     )
-})
+});
