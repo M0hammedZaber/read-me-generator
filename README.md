@@ -4,6 +4,8 @@
 
   when creating an open source project on Github, it's very important to have a high quality README for the app. I created this README generator so that people can easily create a README file using a command-line application to generate one.
 
+  link for demonstration of the application - https://drive.google.com/file/d/1EB-zhLopdqZs3dziLO7fUzGda0vDQpjT/view?usp=sharing
+
   ## Table of Contents
 
   * [Installation](#installation)
